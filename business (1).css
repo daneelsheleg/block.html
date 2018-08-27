@@ -291,11 +291,6 @@ margin-left:60px;
 	border-bottom:2px solid #818B95;
 	margin:0px 25px 10px 25px;
 }
-.lineTwo{
-		padding-top:10px;
-	border-bottom:2px solid #8EB8E2;
-	margin:0px 25px 10px 25px;
-}
 .block1:hover,.block2:hover,.block3:hover {
 	padding-top:20px;
 	height:380px;
@@ -315,7 +310,7 @@ margin-left:60px;
 .dollar{
 	color:#FFBB42;
 }
-.plan, .plan2{
+.plan{
 	font-size:22px;
 	padding-top:10px;
 	text-transform:uppercase
@@ -323,22 +318,23 @@ margin-left:60px;
 .plan, .per, .account{
 	color:#818B95
 }
-.block1:hover .per,.block1:hover .dollar, .block1:hover .plan {
+.block1:hover .per,.block1:hover .dollar, .block1:hover .plan, .block1:hover .account, .block1:hover {
 	color:white
 }
-.block2:hover .per,.block2:hover .dollar, .block2:hover .plan {
+.block2:hover .per,.block2:hover .dollar, .block2:hover .plan,  .block2:hover .account, .block2:hover {
 	color:white
 }
-.block3:hover .per,.block3:hover .dollar, .block3:hover .plan {
+.block3:hover .per,.block3:hover .dollar, .block3:hover .plan, .block3:hover .account, .block3:hover {
 	color:white
 }
-.account, .account2{
+.block1:hover .lineOne, .block2:hover .lineOne, .block3:hover .lineOne{
+border-bottom:2px solid white;
+}
+.account{
 	text-transform:uppercase;
 	font-size:13px;
 }
-.account2{
-	color:#C2E1FF;
-}
+
 .per, .per2{
 	text-transform:uppercase;
 	font-size:16px
@@ -593,15 +589,23 @@ color:#7B7B7B;
 	margin-left:100px
 }
 .DarkBlue{
+	position: relative;
 	border-radius:50%;
 	margin-left:405px;
 	background-color:#394B50;
 	height:300px;
 	width:300px;
 	line-height:7px;
-		text-align:center;
-		margin-bottom:20px
-
+	text-align:center;
+	margin-bottom:20px
+}
+.DarkBlue:after{
+	content: ''; 
+    position: absolute;
+	border: 20px solid transparent;
+	border-top: 20px solid #394B50;
+	margin-left: -20px;
+	margin-top: 75px
 }
 .address{
 	text-align:center;
@@ -612,7 +616,7 @@ color:#7B7B7B;
 	padding-bottom:15px
 }
 .addressOne{
-	color:white;
+	color:#A8B1B4;
 	font-size:15px;
 }
 .addressOne:hover{
@@ -668,7 +672,22 @@ color:#7B7B7B;
 	padding-top:20px;
 	background-color:#709DCA
 }
-.cov:after{
+.covOne:after,.covTwo:after{
+	font-size:24px;
+	position: absolute;
+	font-weight: bold;
+}
+.covOne:after{
 	content:"\201C";
-	font-size:20px;
+}
+.covTwo:after{
+	content:"\201D"
+}
+.covOne{
+	margin-left: -20px
+}
+.covTwo{
+	margin-left: 180px;
+	margin-top: -20px;
+	margin-bottom: 30px
 }
